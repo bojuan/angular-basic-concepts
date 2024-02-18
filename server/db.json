@@ -1,0 +1,14 @@
+{
+  "codes": [
+    "G4B5X-7",
+    "B3X0E-6"
+  ],
+  "companies": [
+    {
+      "name": "Company One",
+      "image": "",
+      "year": 2010,
+      "emai": "contact@company-one.com"
+    }
+  ]
+}
