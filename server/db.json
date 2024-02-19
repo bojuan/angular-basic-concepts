@@ -5,10 +5,11 @@
   ],
   "companies": [
     {
+      "id": 1,
       "name": "Company One",
-      "image": "",
+      "image": "https://static.vecteezy.com/system/resources/thumbnails/008/214/517/small_2x/abstract-geometric-logo-or-infinity-line-logo-for-your-company-free-vector.jpg",
       "year": 2010,
-      "emai": "contact@company-one.com"
+      "email": "contact@company-one.com"
     }
   ]
 }

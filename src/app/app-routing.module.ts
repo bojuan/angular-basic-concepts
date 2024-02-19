@@ -4,12 +4,23 @@ import { VerifyCodePageComponent } from './components/pages/verify-code-page/ver
 import { CompaniesPageComponent } from './components/pages/companies-page/companies-page.component';
 import { EditCompanyPageComponent } from './components/pages/edit-company-page/edit-company-page.component';
 import { CreateCompanyPageComponent } from './components/pages/create-company-page/create-company-page.component';
+import { MainLayoutComponent } from './components/templates/main-layout/main-layout.component';
 
 const routes: Routes = [
   { path: 'verify-code', component: VerifyCodePageComponent },
-  { path: 'companies', component: CompaniesPageComponent },
-  { path: 'edit-company', component: EditCompanyPageComponent },
-  { path: 'create-company', component: CreateCompanyPageComponent },
+  {
+    path: '',
+    component: MainLayoutComponent,
+    children: [
+      { path: '', redirectTo: 'companies', pathMatch: 'full' },
+      {
+        path: 'companies',
+        component: CompaniesPageComponent,
+      },
+      { path: 'companies/edit/:id', component: EditCompanyPageComponent },
+      { path: 'companies/create', component: CreateCompanyPageComponent },
+    ],
+  },
 ];
 
 @NgModule({
