@@ -10,7 +10,7 @@ import { CardData } from 'src/interfaces/card.interfaces';
 })
 export class EditCompanyPageComponent implements OnInit {
   companyId!: string;
-  company: CardData | null = null;
+  company?: CardData;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -31,7 +31,12 @@ export class EditCompanyPageComponent implements OnInit {
     this.companyService
       .getCompany(Number(this.companyId))
       .subscribe((companyRest) => {
+        console.log(companyRest)
         this.company = companyRest;
       });
+  }
+
+  handleSubmit(form: any){
+    console.log("Formulario -->", form)
   }
 }

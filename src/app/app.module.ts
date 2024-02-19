@@ -15,6 +15,7 @@ import { CardComponent } from './components/molecules/card/card.component';
 import { CompanyService } from './services/company-service.service';
 import { ButtonComponent } from './components/atoms/button/button.component';
 import { FormCompanyComponent } from './components/organims/form-company/form-company.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,12 @@ import { FormCompanyComponent } from './components/organims/form-company/form-co
     ButtonComponent,
     FormCompanyComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [CodesService, CompanyService],
   bootstrap: [AppComponent],
 })
