@@ -1,11 +1,15 @@
 {
   "codes": [
     "G4B5X-7",
-    "B3X0E-6"
+    "B3X0E-6",
+    "W1O2J-9",
+    "J1P8X-3",
+    "K2N7Y-1",
+    "S4O9F-0"
   ],
   "companies": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Company One",
       "image": "https://static.vecteezy.com/system/resources/thumbnails/008/214/517/small_2x/abstract-geometric-logo-or-infinity-line-logo-for-your-company-free-vector.jpg",
       "year": 2010,

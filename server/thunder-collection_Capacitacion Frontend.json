@@ -1,0 +1,84 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Capacitacion Frontend",
+    "dateExported": "2024-02-23T13:24:44.525Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d325546f-6c80-4859-a1a7-7d125677417f",
+            "colId": "d247de21-2118-459b-b1dd-a387f1a3a9dc",
+            "containerId": "",
+            "name": "Get code",
+            "url": "http://localhost:8080/code",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-02-23T13:14:00.751Z",
+            "modified": "2024-02-23T13:14:56.743Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0a76ba09-2d2b-4e4d-bf99-26ae93e6cf41",
+            "colId": "d247de21-2118-459b-b1dd-a387f1a3a9dc",
+            "containerId": "",
+            "name": "Validate code",
+            "url": "http://localhost:8080/validate-code/S4O9F-0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-02-23T13:15:27.056Z",
+            "modified": "2024-02-23T13:18:51.542Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "789f21e0-7ebc-4e67-811b-7a71aae77716",
+            "colId": "d247de21-2118-459b-b1dd-a387f1a3a9dc",
+            "containerId": "",
+            "name": "Get companies",
+            "url": "http://localhost:8080/companies",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-02-23T13:19:10.111Z",
+            "modified": "2024-02-23T13:19:45.006Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "884c9a1e-2533-4d78-a8e8-7b89490a21e3",
+            "colId": "d247de21-2118-459b-b1dd-a387f1a3a9dc",
+            "containerId": "",
+            "name": "Create company",
+            "url": "http://localhost:8080/company",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2024-02-23T13:20:25.158Z",
+            "modified": "2024-02-23T13:21:21.004Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n      \"name\": \"Company One\",\n      \"image\": \"https://static.vecteezy.com/system/resources/thumbnails/008/214/517/small_2x/abstract-geometric-logo-or-infinity-line-logo-for-your-company-free-vector.jpg\",\n      \"year\": 2010,\n      \"email\": \"contact@company-one.com\"\n    }",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "05058673-694a-4396-9ce2-6519b42a5c8e",
+            "colId": "d247de21-2118-459b-b1dd-a387f1a3a9dc",
+            "containerId": "",
+            "name": "Delete company",
+            "url": "http://localhost:8080/company/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-02-23T13:21:46.252Z",
+            "modified": "2024-02-23T13:22:39.988Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
