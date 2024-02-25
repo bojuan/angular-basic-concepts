@@ -1,21 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class CodesService implements OnInit {
-  code?: string;
+export class CodesService {
+  private code = new BehaviorSubject<string | undefined>(undefined);
+  code$ = this.code.asObservable();
+
+  private loading = new BehaviorSubject<boolean>(false);
+  loading$ = this.loading.asObservable();
 
   constructor(private http: HttpClient) {}
 
-  ngOnInit(): void {
-    console.log('Aquiiii');
-  }
-
   getCode() {
-    this.http.get('http://localhost:8080/').subscribe((resp) => {
-      console.log(resp);
-    });
+    this.loading.next(true);
+    this.http
+      .get<{ code: string }>('http://localhost:8080/code')
+      .subscribe((resp) => {
+        this.code.next(resp.code);
+        this.loading.next(false);
+      });
   }
 }

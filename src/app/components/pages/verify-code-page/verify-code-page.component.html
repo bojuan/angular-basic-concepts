@@ -1,2 +1,31 @@
-<p>verify-code-page works!</p>
-<button (click)="handleGenerateCode()">Get code</button>
+<app-navbar></app-navbar>
+<main class="flex items-center gap-8 mx-auto w-fit my-8">
+  <div>
+    <img
+      class="w-96"
+      alt="Generate code"
+      src="https://img.freepik.com/vector-gratis/ilustracion-concepto-modo-enfoque_114360-6949.jpg?t=st=1708830200~exp=1708833800~hmac=107a0e67392a6524fa80fea15be44aa78493a8bc9cd38f49ffdbf5a142d3f4dc&w=1060"
+    />
+  </div>
+  <div class="flex flex-col gap-9 min-w-80">
+    <app-generate-code
+      [code]="(code$ | async) ?? undefined"
+      (generateCode)="handleGenerateCode()"
+    ></app-generate-code>
+    <div *ngIf="!!(code$ | async)" class="flex flex-col items-center gap-4">
+      <input
+        class="w-full rounded-md border border-blue-gray-200 bg-transparent px-3 py-3 font-sans text-sm font-normal text-blue-gray-700 outline outline-0 transition-all placeholder-shown:border placeholder-shown:border-blue-gray-200 placeholder-shown:border-t-blue-gray-200 focus:border-2 focus:border-pink-500 focus:outline-0 disabled:border-0 disabled:bg-blue-gray-50"
+        placeHolder="Codigo"
+        [(ngModel)]="valueInput"
+      />
+      <span *ngIf="showErrorMessage">Codes doesn't equals</span>
+      <app-button (clickButton)="handleVerifyCode()">Ingresar</app-button>
+    </div>
+  </div>
+</main>
+<div
+  *ngIf="loading$ | async"
+  class="fixed top-0 w-screen h-screen bg-slate-500/[.6] flex items-center justify-center"
+>
+  <app-spinner></app-spinner>
+</div>

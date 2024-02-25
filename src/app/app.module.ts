@@ -15,7 +15,9 @@ import { CardComponent } from './components/molecules/card/card.component';
 import { CompanyService } from './services/company-service.service';
 import { ButtonComponent } from './components/atoms/button/button.component';
 import { FormCompanyComponent } from './components/organims/form-company/form-company.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GenerateCodeComponent } from './components/molecules/generate-code/generate-code.component';
+import { SpinnerComponent } from './components/atoms/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -29,12 +31,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     CardComponent,
     ButtonComponent,
     FormCompanyComponent,
+    GenerateCodeComponent,
+    SpinnerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    FormsModule
   ],
   providers: [CodesService, CompanyService],
   bootstrap: [AppComponent],

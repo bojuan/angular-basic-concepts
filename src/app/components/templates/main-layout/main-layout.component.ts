@@ -32,7 +32,5 @@ export class MainLayoutComponent implements OnInit {
   getCurrentPath() {
     this.activeRoute =
       this.itemsNav.find((item) => item.href === this.router.url)?.label ?? '';
-
-    console.log('this.activeRoute -->', this.activeRoute);
   }
 }
